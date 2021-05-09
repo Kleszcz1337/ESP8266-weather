@@ -6,12 +6,12 @@
 LiquidCrystal lcd(D0, D1, D2, D3, D4, D5); 
 
 
-char* ssid = XXXX";  //wifi ssid
+char* ssid = "XXXX";  //wifi ssid
 char* password = "XXXX";   //wifi password
 
 WiFiUDP ntpUDP;
 
-NTPClient timeClient(ntpUDP, "asia.pool.ntp.org", 20700, 60000);
+NTPClient timeClient(ntpUDP, "europe.pool.ntp.org", 3600, 60000); //getting europe timezone
 
 char Time[ ] = "TIME:00:00:00";
 char Date[ ] = "DATE:00/00/2000";
